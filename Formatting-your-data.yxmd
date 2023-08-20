@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="31" y="121" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="6" />
+          <Fields>
+            <Field name="CustomerID" />
+            <Field name="FirstName" />
+            <Field name="LastName" />
+            <Field name="Gender" />
+            <Field name="JoinDate" />
+            <Field name="Region" />
+            <Field name="Score" />
+          </Fields>
+          <Data>
+            <r>
+              <c>49</c>
+              <c>Thomas</c>
+              <c>Edison</c>
+              <c>M</c>
+              <c>2014-08-21</c>
+              <c>South</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>456</c>
+              <c>galileo</c>
+              <c />
+              <c>M</c>
+              <c>2014-04-01</c>
+              <c>South</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>31</c>
+              <c>Benjamin</c>
+              <c>Franklin</c>
+              <c>M</c>
+              <c>2014-12-21</c>
+              <c>Midwest</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>5</c>
+              <c>Dorothy</c>
+              <c>Franklin</c>
+              <c>F</c>
+              <c>2014-10-01</c>
+              <c>Northeast</c>
+              <c>22</c>
+            </r>
+            <r>
+              <c>1</c>
+              <c>Louis</c>
+              <c>Pasteur</c>
+              <c>M</c>
+              <c>2013-09-06</c>
+              <c>West</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>'Tim'</c>
+              <c>Berners-Lee</c>
+              <c>M</c>
+              <c>2014-01-26</c>
+              <c>Midwest</c>
+              <c>a</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="126" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="CustomerID" order="Ascending" />
+            <Field field="FirstName" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>CustomerID - Ascending
+FirstName - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="306" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\icons\AppData\Local\Temp\Engine_61928_f91b47fb6096456c9a8eaaa7e2ec0ee9_\Engine_3244_83726fbbdf6b4c42b474089581171b70_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="31" y="25" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>WA_Fn-UseC_-Telco-Customer-Churn.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="customerID" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="gender" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="SeniorCitizen" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="Partner" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="Dependents" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="tenure" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="PhoneService" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="InternetService" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="Contract" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="Payment_PB" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="PaymentMethod" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="M_Charges" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="TotalCharges" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+            <Field name="Churn" size="254" source="File: C:\Rahul Devkar\Altryx\Level 2\WA_Fn-UseC_-Telco-Customer-Churn.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="115" y="25" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SeniorCitizen" selected="True" type="Bool" size="1" />
+            <SelectField field="tenure" selected="True" type="Int16" size="2" />
+            <SelectField field="Payment_PB" selected="True" rename="Paperless_Billing" />
+            <SelectField field="M_Charges" selected="True" rename="Monthly_Charges" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="235" y="25" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\icons\AppData\Local\Temp\Engine_61928_f91b47fb6096456c9a8eaaa7e2ec0ee9_\Engine_3244_d819e17fb87445e1ae936bcc810f3c32_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="31" y="205" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>places.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Store Num" size="255" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Address" size="255" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="City" size="255" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="State" size="255" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="ZIP" size="255" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Lat" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Lon" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="County " size="255" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Region" size="255" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Type" size="255" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Store Number" size="255" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Total Sales" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Credit Sales" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Total Customers" source="File: C:\Rahul Devkar\Altryx\Level 2\places.xlsx|||`Sheet1$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings>
+        <Position x="127" y="205" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Store Num","Address","City","State","ZIP","Lat","Lon","County ","Region","Type","Store Number","Total Sales","Credit Sales","Total Customers"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">True</Value>
+          <Value name="Drop Down (81)">title</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="_externals\1\Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="235" y="205" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\icons\AppData\Local\Temp\Engine_61928_f91b47fb6096456c9a8eaaa7e2ec0ee9_\Engine_3244_08051b2b64954ce59f6f97baa48141c3_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings>
+        <Position x="210" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"CustomerID","FirstName","LastName","Gender","JoinDate","Region","Score"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="24" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output26" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output26" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="False" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Formatting-your-data</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="12932632-f601-4b2a-819a-fa909ae5a7e0" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="12932632-f601-4b2a-819a-fa909ae5a7e0" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="5" />
+          <Fields>
+            <Field name="Amount" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1005</c>
+            </r>
+            <r>
+              <c>900.6</c>
+            </r>
+            <r>
+              <c>9999.23</c>
+            </r>
+            <r>
+              <c>123.43</c>
+            </r>
+            <r>
+              <c>1423.00</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Amount" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Amount" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="234" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ToString([Amount], 1,0)" field="Amount_in_String" size="254" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Amount_in_String = ToString([Amount], 1,0)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Amount" source="TextInput:" type="Double" />
+            <Field name="Amount_in_String" size="254" source="Formula: ToString([Amount], 1,0)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="5" />
+          <Fields>
+            <Field name="Amount" />
+          </Fields>
+          <Data>
+            <r>
+              <c>$123.45</c>
+            </r>
+            <r>
+              <c>4563</c>
+            </r>
+            <r>
+              <c>9000.1</c>
+            </r>
+            <r>
+              <c>54321.433</c>
+            </r>
+            <r>
+              <c>$600.567</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Amount" size="9" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="138" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Amount" size="9" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="234" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ToNumber(Replace([Amount], &quot;$&quot;, &quot;&quot;))" field="Payment" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Payment = ToNumber(Replace([Amount], "$", ""))
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Amount" size="9" source="TextInput:" type="String" />
+            <Field name="Payment" size="1073741823" source="Formula: ToNumber(Replace([Amount], &quot;$&quot;, &quot;&quot;))" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">_externals\1\googleplaystore.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>googleplaystore.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="App" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Rating" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Reviews" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Size" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Installs" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Price" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Content Rating" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Genres" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Rating" selected="True" type="FixedDecimal" size="10.1" />
+            <SelectField field="Price" selected="True" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="App" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Rating" scale="1" size="10" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="FixedDecimal" />
+            <Field name="Reviews" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Size" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Installs" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Price" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="Double" />
+            <Field name="Content Rating" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Genres" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="246" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Switch([Content Rating],'NA',&#xA;'Adults only 18+','M',&#xA;'Everyone','PG',&#xA;'Everyone 10+','PG',&#xA;'Mature 17+','M',&#xA;'Teen','T',&#xA;'Unrated','NA'&#xA;)" field="Code" size="300" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Code = Switch([Content Rating],'NA',
+'Adults only 18+','M',
+'Everyone','PG',
+'Ev...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="App" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Rating" scale="1" size="10" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="FixedDecimal" />
+            <Field name="Reviews" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Size" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Installs" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Price" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="Double" />
+            <Field name="Content Rating" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Genres" size="254" source="File: C:\Users\Leah Bucalon\Desktop\Demo\googleplaystore.csv" type="V_String" />
+            <Field name="Code" size="300" source="Formula: Switch([Content Rating],'NA',&#xA;'Adults only 18+','M',&#xA;'Everyone','PG',&#xA;'Everyone 10+','PG',&#xA;'Mature 17+','M',&#xA;'Teen','T',&#xA;'Unrated','NA'&#xA;)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>conversion</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
